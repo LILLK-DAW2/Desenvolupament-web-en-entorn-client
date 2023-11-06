@@ -1,0 +1,11 @@
+<div class="card-container">
+  <div class="card">
+
+    <div *ngFor="let foto of photos; index as i; ">
+      <img [src]="foto.image" width="200" height="200">
+      
+      <button (click)="foto.chageLock()" ><img [src]="getCandaoImagen(foto)" width="200" height="200"></button>
+    </div>
+
+  </div>
+</div>
