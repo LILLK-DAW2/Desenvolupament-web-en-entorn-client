@@ -1,11 +1,23 @@
 <div class="card-container">
-  <div class="card">
-
-    <div *ngFor="let foto of photos; index as i; ">
-      <img [src]="foto.image" width="200" height="200">
-      
-      <button (click)="foto.chageLock()" ><img [src]="getCandaoImagen(foto)" width="200" height="200"></button>
-    </div>
-
-  </div>
+    <form *ngFor="let value of serverCharacters; index as i; ">
+      <label for="name">Name:</label>
+      <input type="text" name="name" [(ngModel)]="value.name" [disabled]=true>
+      <label for="strength">Strength:</label>
+      <input type="text" name="strength" [(ngModel)]="value.strength" [disabled]=true>
+      <label for="agility" >Agility:</label>
+      <input type="text" name="agility"  [(ngModel)]="value.agility" [disabled]=true>
+      <label for="intelligence" >Intelligence:</label>
+      <input type="text" name="intelligence"  [(ngModel)]="value.intelligence" [disabled]=true >
+      <label for="life" >Life:</label>
+      <input type="text" name="life"  [(ngModel)]="value.life" [disabled]=true >
+      <label for="stat6" >stat6:</label>
+      <input type="text" name="stat6"  [(ngModel)]="value.stat6" [disabled]=true >
+      <label for="stat7" >stat7:</label>
+      <input type="text" name="stat7"  [(ngModel)]="value.stat7" [disabled]=true >
+      <label for="stat8" >stat8:</label>
+      <input type="text" name="stat8"  [(ngModel)]="value.stat8" [disabled]=true >
+      <input type="button" value="editar"  (click)="editar(i)">
+      <input type="button" value="reinciar" (click)="reiniciar(i)">
+    </form>
+  <p>{{paragrafo}}</p>
 </div>
